@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Roulette</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Credit Card Roulette</h1>
+    <hr size="3" width="90%" color="black">  
+    <div>
+        <div class="flex-row" id="1">
+            <div>
+                <label for="name">Name:</label>
+                <input type="name">
+            </div>
+            <div>
+                <label for="name">Credit Card Number:</label>
+                <input type="name" placeholder="XXXX-XXXX-XXXX" disabled>
+            </div>
+        </div>
+        <div class="flex-row" id="2">
+            <div>
+                <label for="name">Name:</label>
+                <input type="name">
+            </div>
+            <div>
+                <label for="name">Credit Card Number:</label>
+                <input type="name" placeholder="XXXX-XXXX-XXXX" disabled>
+            </div>
+        </div>
+    </div>
+    <hr size="3" width="90%" color="black">  
+    
+    <div class="flex-row">
+        <button type="submit" id="roulette">Roulette</button>
+        <button type="submit" id="add-card" onclick="addAnotherCard()">Add Another card</button>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+</html>
