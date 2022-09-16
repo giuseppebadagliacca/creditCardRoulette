@@ -9,22 +9,25 @@
 </head>
 <body>
     <h1>Credit Card Roulette</h1>
-    <hr size="3" width="90%" color="black">  
-    <div>
-        <div class="flex-row" id="1">
+    <hr size="3" width="90%" color="black">
+    <div id="errorMsg"></div>  
+    <div id="entries">
+        <div class="flex-row">
+            <div>1.</div>
             <div>
-                <label for="name">Name:</label>
-                <input type="name">
+                <label for="name" >Name:</label>
+                <input type="name" id="1">
             </div>
             <div>
                 <label for="name">Credit Card Number:</label>
                 <input type="name" placeholder="XXXX-XXXX-XXXX" disabled>
             </div>
         </div>
-        <div class="flex-row" id="2">
+        <div class="flex-row">
+            <div>2.</div>
             <div>
                 <label for="name">Name:</label>
-                <input type="name">
+                <input type="name" id="2">
             </div>
             <div>
                 <label for="name">Credit Card Number:</label>
@@ -32,10 +35,11 @@
             </div>
         </div>
     </div>
+    <div id="winnerMsg"></div> 
     <hr size="3" width="90%" color="black">  
     
     <div class="flex-row">
-        <button type="submit" id="roulette">Roulette</button>
+        <button type="submit" id="roulette" onclick="randomize()">Roulette</button>
         <button type="submit" id="add-card" onclick="addAnotherCard()">Add Another card</button>
     </div>
 

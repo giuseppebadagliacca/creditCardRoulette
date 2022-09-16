@@ -47,3 +47,19 @@ button:hover{
     background: rgb(232, 226, 226);
 }
 
+.errorMsgStyle{
+    color: rgba(0, 0, 0, 0.568);
+    background: linear-gradient(90deg,rgba(255, 0, 0, 0.637),rgba(255, 105, 180, 0.201),rgba(255, 0, 0, 0.637));
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+
+.winnerMsgStyle{
+    color: rgba(0, 0, 0, 0.568);
+    background: linear-gradient(90deg,rgba(0, 128, 0, 0.617),rgba(144, 238, 144, 0.508),rgba(0, 128, 0, 0.542));
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+
+}
