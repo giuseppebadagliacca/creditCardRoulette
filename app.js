@@ -1,6 +1,8 @@
 let entriesDOM = document.getElementById("entries");
 let errorMsgDOM = document.getElementById("errorMsg");
 let winnerMsgDOM = document.getElementById("winnerMsg");
+let routletteBtnDOM = document.getElementById("roulette");
+let addBtnDOM = document.getElementById("add-card");
 
 let idCount = 3;
 
@@ -8,7 +10,7 @@ function addAnotherCard() {
   if(idCount <= 10){
     entriesDOM.innerHTML += `
      <div class="flex-row">
-            <div>${idCount}.</div>
+            <div class="num">${idCount}.</div>
             <div>
                 <label for="name" >Name:</label>
                 <input type="name" id=${idCount}>
@@ -46,6 +48,8 @@ function checkValidityofInPuts(){
 }
 
 function display(status, msg, stlye){
+  routletteBtnDOM.disabled = true;
+  addBtnDOM.disabled = true;
   status.className = stlye;
   status.innerText = msg;
   setTimeout(clear,4000);
@@ -53,6 +57,8 @@ function display(status, msg, stlye){
 
 
 function clear(){
+  routletteBtnDOM.disabled = false;
+  addBtnDOM.disabled = false;
   errorMsgDOM.className = "";
   errorMsgDOM.innerText = "";
   winnerMsgDOM.className = "";
