@@ -55,16 +55,18 @@ h4{
     border-radius: 10px;
 
 }
-button{
+button, a{
+    color: black;
     background-color: #fff;
     border: 2px solid black;
     padding: 10px;
     margin: 10px;
     border-radius: 12px;
     font-size: 1.05em;
+    text-decoration: none;
 }
 
-button:hover{
+button:hover, a:hover{
     background: rgb(232, 226, 226);
 }
 

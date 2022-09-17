@@ -3,13 +3,15 @@ let errorMsgDOM = document.getElementById("errorMsg");
 let winnerMsgDOM = document.getElementById("winnerMsg");
 let routletteBtnDOM = document.getElementById("roulette");
 let addBtnDOM = document.getElementById("add-card");
+let btnsDiv = document.getElementById("btns-div");
 
 let idCount = 3;
 
 function addAnotherCard() {
   if(idCount <= 10){
-    entriesDOM.innerHTML += `
-     <div class="flex-row">
+    const newDiv = document.createElement("div");
+    newDiv.className = "flex-row";
+    newDiv.innerHTML = `
             <div class="num">${idCount}.</div>
             <div>
                 <label for="name" >Name:</label>
@@ -19,8 +21,21 @@ function addAnotherCard() {
                 <label for="name">Credit Card Number:</label>
                 <input type="name" placeholder="XXXX-XXXX-XXXX" disabled>
             </div>
-        </div>
-    `
+          `
+          entriesDOM.appendChild(newDiv);
+    // entriesDOM.innerHTML += `
+    //  <div class="flex-row">
+    //         <div class="num">${idCount}.</div>
+    //         <div>
+    //             <label for="name" >Name:</label>
+    //             <input type="name" id=${idCount}>
+    //         </div>
+    //         <div>
+    //             <label for="name">Credit Card Number:</label>
+    //             <input type="name" placeholder="XXXX-XXXX-XXXX" disabled>
+    //         </div>
+    //     </div>
+    // `
     idCount++;
   }
 }
@@ -30,7 +45,7 @@ function randomize(){
     const randomNum = Math.floor(Math.random() * (idCount-1))+1;
     const randomWinner = document.getElementById(`${randomNum}`).value;
     
-    display(winnerMsgDOM,`Sorry, ${randomWinner}, pay up!`,"winnerMsgStyle");
+    display(winnerMsgDOM,`Sorry, ${randomWinner}, you were randomly selected.Pay up!`,"winnerMsgStyle");
 
   }else{
     display(errorMsgDOM,"Must enter a name and credit card number for each player!","errorMsgStyle");
@@ -52,7 +67,11 @@ function display(status, msg, stlye){
   addBtnDOM.disabled = true;
   status.className = stlye;
   status.innerText = msg;
-  setTimeout(clear,4000);
+  if(status===errorMsgDOM){
+    setTimeout(clear,4000);
+  }else{
+    nextStepsAfterWinner();
+  }
 }
 
 
@@ -63,4 +82,11 @@ function clear(){
   errorMsgDOM.innerText = "";
   winnerMsgDOM.className = "";
   winnerMsgDOM.innerText = "";
+}
+
+function nextStepsAfterWinner(){
+  btnsDiv.innerHTML = 
+  `
+  <a href="/tipCacl.html">Calculate Tip</a>
+  `
 }
