@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Tip</title>
+    <link rel="stylesheet" href="/tipCalc/tip.css">
+</head>
+<body>
+    <h1>Calculate Tip</h1>
+    <h4>Choose the tip percentage and enter bill amount to calculate total amount due!</h4>
+    <hr size="3" width="90%" color="black">
+    <div></div>  
+    <div>
+        <div class="flex-row">
+            <div class="flex-row" >
+              <label for="15">15%</label>
+              <input type="radio" id=".15" name="percent"></div>
+            <div class="flex-row" >
+              <label for="20">20%</label>
+              <input type="radio" id=".20" name="percent"></div>
+            <div class="flex-row" >
+              <label for="25">25%</label>
+              <input type="radio" id=".25" name="percent"></div>
+        </div>
+        <div class="flex-row">
+          <label for="text">Bill Amount:</label>
+          <input type="number" id="bill-amount">
+        </div>
+    </div>
+    <div id="display-div"></div> 
+    <hr size="3" width="90%" color="black">  
+    
+    <div class="flex-row" id="btns-div">
+          <button type="submit" onclick="calculateTip()">Calculate</button>
+    </div>
+    <script src="/tipCalc/tip.js"></script>
+
+</body>
+</html>

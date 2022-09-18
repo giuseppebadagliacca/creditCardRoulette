@@ -23,19 +23,6 @@ function addAnotherCard() {
             </div>
           `
           entriesDOM.appendChild(newDiv);
-    // entriesDOM.innerHTML += `
-    //  <div class="flex-row">
-    //         <div class="num">${idCount}.</div>
-    //         <div>
-    //             <label for="name" >Name:</label>
-    //             <input type="name" id=${idCount}>
-    //         </div>
-    //         <div>
-    //             <label for="name">Credit Card Number:</label>
-    //             <input type="name" placeholder="XXXX-XXXX-XXXX" disabled>
-    //         </div>
-    //     </div>
-    // `
     idCount++;
   }
 }
@@ -87,6 +74,6 @@ function clear(){
 function nextStepsAfterWinner(){
   btnsDiv.innerHTML = 
   `
-  <a href="/tipCacl.html">Calculate Tip</a>
+  <a href="/tipCalc/tipCacl.html">Calculate Tip</a>
   `
 }
