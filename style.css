@@ -48,6 +48,7 @@ body{
 
 h4{
     padding: .5em 0;
+    text-align: center;
 }
 
 .num{
@@ -88,18 +89,33 @@ button:hover, a:hover{
     border-radius: 15px;
 }
 
-/* @media only screen 
+@media only screen 
     and (max-device-width: 820px){
         body{
-            width: 820px;
+            height: 100%;
         }
-        #entries .flex-row{
+         #entries .flex-row{
             flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            border: 2px solid black;
+            justify-content: center;
+            align-items: center;
+            /* border-bottom: 1px solid black; */
+        }
+        #entries .flex-row label{
+            display: block;
         }
         #entries .flex-row div{
             font-size: .75em;
-     }
-    } */
+        } 
+        #entries{
+            margin: 5px 0;
+            width: 97%;
+        }
+        .grey1{
+            background: rgba(128, 128, 128);
+        }
+
+        .grey2{
+            background: lightgray;
+        }
+
+    }
