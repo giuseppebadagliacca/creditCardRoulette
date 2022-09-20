@@ -90,15 +90,12 @@ button:hover, a:hover{
 }
 
 @media only screen 
-    and (max-device-width: 820px){
-        body{
-            height: 100%;
-        }
+    and (max-device-width: 550px){
          #entries .flex-row{
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            /* border-bottom: 1px solid black; */
+            
         }
         #entries .flex-row label{
             display: block;

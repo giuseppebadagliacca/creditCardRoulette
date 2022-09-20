@@ -6,11 +6,13 @@ let addBtnDOM = document.getElementById("add-card");
 let btnsDiv = document.getElementById("btns-div");
 
 let idCount = 3;
+let grey = "grey1";
 
 function addAnotherCard() {
   if(idCount <= 10){
     const newDiv = document.createElement("div");
-    newDiv.className = "flex-row";
+    newDiv.className = `flex-row ${grey}`;
+    greys();
     newDiv.innerHTML = `
             <div class="num">${idCount}.</div>
             <div>
@@ -27,6 +29,9 @@ function addAnotherCard() {
   }
 }
 
+function greys(){
+grey === "grey1" ? grey = "grey2": grey = "grey1";
+}
 function randomize(){
   if(checkValidityofInPuts()){
     const randomNum = Math.floor(Math.random() * (idCount-1))+1;
