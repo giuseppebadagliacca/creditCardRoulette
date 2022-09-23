@@ -9,7 +9,7 @@ let idCount = 3;
 let grey = "grey1";
 
 function addAnotherCard() {
-  if(idCount <= 10){
+  if(idCount <= 5){
     const newDiv = document.createElement("div");
     newDiv.className = `flex-row ${grey}`;
     greys();

@@ -16,7 +16,6 @@ body{
 
 
 .flex-row{
-    /* border: 2px solid black; */
     display: flex;
     flex-direction: row;
     align-items:center;
@@ -91,12 +90,19 @@ button:hover, a:hover{
 
 @media only screen 
     and (max-device-width: 550px){
+        body{
+            height: 100%;
+        }
          #entries .flex-row{
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            
         }
+
+        .flex-row div input:hover{
+            background: #fff;
+        }
+
         #entries .flex-row label{
             display: block;
         }
@@ -115,4 +121,22 @@ button:hover, a:hover{
             background: lightgray;
         }
 
+        .winnerMsgStyle{
+            font-size: 1.5em;
+            color: rgba(0, 0, 0, 0.568);
+            background: linear-gradient(90deg,rgba(0, 128, 0, 0.617),rgba(144, 238, 144, 0.508),rgba(0, 128, 0, 0.542));
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 15px;
+            width: 97%;
+        }
+        .errorMsgStyle{
+            font-size: 1.5em;
+            color: rgba(0, 0, 0, 0.568);
+            background: linear-gradient(90deg,rgba(255, 0, 0, 0.637),rgba(255, 105, 180, 0.201),rgba(255, 0, 0, 0.637));
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 15px;
+            width: 97%;
+        }
     }
