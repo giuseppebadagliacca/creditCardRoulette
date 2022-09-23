@@ -92,6 +92,7 @@ button:hover, a:hover{
     and (max-device-width: 550px){
         body{
             height: 100%;
+            padding: 15px 10px;
         }
          #entries .flex-row{
             flex-direction: column;
