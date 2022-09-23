@@ -116,10 +116,14 @@ button:hover, a:hover{
         }
         .grey1{
             background: rgba(128, 128, 128);
+            border-radius: 15px;
+            margin: 5px 0;
         }
 
         .grey2{
             background: lightgray;
+            border-radius: 15px;
+            margin: 5px 0;
         }
 
         .winnerMsgStyle{
