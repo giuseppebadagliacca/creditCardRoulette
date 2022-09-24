@@ -37,7 +37,7 @@ function randomize(){
     const randomNum = Math.floor(Math.random() * (idCount-1))+1;
     const randomWinner = document.getElementById(`${randomNum}`).value;
     
-    display(winnerMsgDOM,`Sorry, ${randomWinner}, you were randomly selected.Pay up!`,"winnerMsgStyle");
+    display(winnerMsgDOM,`Sorry ${randomWinner}, you were randomly selected. Pay up!`,"winnerMsgStyle");
 
   }else{
     display(errorMsgDOM,"Must enter a name and credit card number for each player!","errorMsgStyle");

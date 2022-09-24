@@ -75,8 +75,9 @@ button:hover, a:hover{
     color: rgba(0, 0, 0, 0.568);
     background: linear-gradient(90deg,rgba(255, 0, 0, 0.637),rgba(255, 105, 180, 0.201),rgba(255, 0, 0, 0.637));
     padding: 15px;
-    margin-top: 10px;
+    margin: 10px 0;
     border-radius: 15px;
+    text-align: center;
 }
 
 .winnerMsgStyle{
@@ -84,8 +85,9 @@ button:hover, a:hover{
     color: rgba(0, 0, 0, 0.568);
     background: linear-gradient(90deg,rgba(0, 128, 0, 0.617),rgba(144, 238, 144, 0.508),rgba(0, 128, 0, 0.542));
     padding: 15px;
-    margin-bottom: 10px;
+    margin: 10px 0;
     border-radius: 15px;
+    text-align: center;
 }
 
 @media only screen 
@@ -131,17 +133,19 @@ button:hover, a:hover{
             color: rgba(0, 0, 0, 0.568);
             background: linear-gradient(90deg,rgba(0, 128, 0, 0.617),rgba(144, 238, 144, 0.508),rgba(0, 128, 0, 0.542));
             padding: 15px;
-            margin-bottom: 10px;
+            margin: 10px 0;
             border-radius: 15px;
             width: 97%;
+            text-align: center;
         }
         .errorMsgStyle{
             font-size: 1.5em;
             color: rgba(0, 0, 0, 0.568);
             background: linear-gradient(90deg,rgba(255, 0, 0, 0.637),rgba(255, 105, 180, 0.201),rgba(255, 0, 0, 0.637));
             padding: 15px;
-            margin-top: 10px;
+            margin: 10px 0;
             border-radius: 15px;
             width: 97%;
+            text-align: center;
         }
     }
