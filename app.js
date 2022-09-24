@@ -4,6 +4,7 @@ let winnerMsgDOM = document.getElementById("winnerMsg");
 let routletteBtnDOM = document.getElementById("roulette");
 let addBtnDOM = document.getElementById("add-card");
 let btnsDiv = document.getElementById("btns-div");
+let randomWinner = '';
 
 let idCount = 3;
 let grey = "grey1";
@@ -35,7 +36,7 @@ grey === "grey1" ? grey = "grey2": grey = "grey1";
 function randomize(){
   if(checkValidityofInPuts()){
     const randomNum = Math.floor(Math.random() * (idCount-1))+1;
-    const randomWinner = document.getElementById(`${randomNum}`).value;
+    randomWinner = document.getElementById(`${randomNum}`).value;
     
     display(winnerMsgDOM,`Sorry ${randomWinner}, you were randomly selected. Pay up!`,"winnerMsgStyle");
 
