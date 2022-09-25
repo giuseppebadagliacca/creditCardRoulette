@@ -34,15 +34,7 @@ function validateInputs(){
   return (percentage && document.getElementById('bill-amount').value) ? true:false;
 }
 
-function display(msg, stlye, clear){
+function display(msg, stlye){
   displayDivDOM.className = stlye;
   displayDivDOM.innerText = msg;
-  if(clear){
-    setTimeout(clearDisplay,4000);
-  }
-}
-
-function clearDisplay(){
-  displayDivDOM.className = "";
-  displayDivDOM.innerText = "";
 }
