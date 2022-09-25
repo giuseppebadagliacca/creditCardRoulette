@@ -12,9 +12,10 @@ function calculateTip(){
         selectedPercentage =  Number(ele[i].id);
       }
     }
+    const tip = billAmountDOM * selectedPercentage;
     const grandTotal = ((billAmountDOM * selectedPercentage) + billAmountDOM).toFixed(2);
 
-    display(`Grand total: $${grandTotal}. Pay up!`, "winnerMsgStyle", false);
+    display(`Bill Amount: ${billAmountDOM}\nTip Amount: ${tip}\nGrand total: $${grandTotal}. Pay up!`, "winnerMsgStyle", false);
   }else{
     display('Must enter both bill amount and tip percentage!', "errorMsgStyle", true);
   }
